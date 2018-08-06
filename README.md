@@ -5,6 +5,15 @@
 <li>Make sure PyQt4 is properly installed. Use pip freeze to list the installed packages</li>
 <li>Install PyInstaller: pip install pyinstaller</li>
 <li>Run the app: open the main.py and run it using your IDE or simply open EasyConverter.exe</li>
+<li>Test by converting a convertMe.ui file to .py file</li>
+<li>Take a note as double clicking your generated .py file won't work right away:<ol>
+  <li>Open the main.py for editing and look for the main class.</li>
+  <li>First import sys
+  <li>In the class brackets, replace anything present with QtGui.QWidget</li>
+  <li>Then within this class make a initial/constructor method: def __init__(self):</li>
+  <li>Within constructor add these two lines: QtGui.QWidget.__init__(self) and self.setupUi(self)</li>
+  </ol></li>
+<li>Everything's done. Now run by double clicking your .py file</li>
 </ul>
 
 <b>NOTE</b>
